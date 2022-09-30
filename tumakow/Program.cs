@@ -31,14 +31,14 @@ namespace tumakow
             };
             Console.Write("Задание 1. День|месяц\nВведите год: ");
             int year = int.Parse(Console.ReadLine());
-            if (year % 4 == 0 && year % 100 != 0)
+            if (year % 4 == 0 & year % 100 != 0)
             {
                 Console.WriteLine("Год високосный поэтому введите" +
                     "число n(1 <= n <= 366): ");
                 int date = int.Parse(Console.ReadLine());
                 if (date < 1 || date > 366)
                 {
-                    Console.WriteLine("Читать научись");
+                    Console.WriteLine("Введено неправильно!");
                 }
                 else
                 {
@@ -97,12 +97,12 @@ namespace tumakow
             }
             else
             {
-                Console.WriteLine("Год високосный поэтому введите" +
+                Console.WriteLine("Год весокосный поэтому введите" +
                     "число n(1 <= n <= 366): ");
                 int date = int.Parse(Console.ReadLine());
                 if (date < 1 || date > 366)
                 {
-                    Console.WriteLine("Читать научись");
+                    Console.WriteLine("Введено неправильно");
                 }
                 else
                 {
@@ -123,12 +123,57 @@ namespace tumakow
                         Console.WriteLine($"{date - 90}{month[120]}");
                     }
                     else if (date <= 151)
+                    {
+                        Console.WriteLine($"{date - 151}{month[181]}");
+                    }
+                    else if (date <= 212)
+                    {
+                        Console.WriteLine($"{date - 181}{month[212]}");
+                    }
+                    else if (date <= 243)
+                    {
+                        Console.WriteLine($"{date - 212}{month[243]}");
+                    }
+                    else if (date <= 273)
+                    {
+                        Console.WriteLine($"{date - 243}{month[273]}");
+                    }
+                    else if (date <= 304)
+                    {
+                        Console.WriteLine($"{date - 273}{month[304]}");
+                    }
+                    else if (date <= 334)
+                    {
+                        Console.WriteLine($"{date - 304}{month[334]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{date - 334}{month[365]}");
+
+                    }
+                    Console.ReadLine();
+
+
+
                 }
 
             }
 
 
+            
+
+
+            
+
+
+
         }
+           
+
+
+
+
+        
             
 
     }
